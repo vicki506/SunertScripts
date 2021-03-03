@@ -30,34 +30,27 @@ jobs:
         run: |
           npm install
           
-      - name: '运行 【中青看点自动阅读一】'
-        if: env.YOUTH_READ
-        run: |
-          node Task/Youth_Read1.js
-        env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ }}
-          YOUTH_ATIME: ${{ secrets.YOUTH_ATIME }}
-
-      - name: '运行 【中青看点自动阅读二】'
-        if: env.YOUTH_READ2
-        run: |
-          node Task/Youth_Read1.js
-        env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
-          YOUTH_ATIME: ${{ secrets.YOUTH_ATIME2 }}
-          
-      - name: '运行 【中青看点自动阅读三】'
-        if: env.YOUTH_READ3
-        run: |
-          node Task/Youth_Read1.js
-        env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ3 }}
-          YOUTH_ATIME: ${{ secrets.YOUTH_ATIME3 }}
-          
-      - name: '运行 【中青看点自动阅读四】'
+      - name: '运行 【中青看点自动阅读5】'
         if: env.YOUTH_READ4
         run: |
-          node Task/Youth_Read1.js
+          node Task/Youth_Read.js
         env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ4 }}
-          YOUTH_ATIME: ${{ secrets.YOUTH_ATIME4 }}
+          YOUTH_READ: ${{ secrets.YOUTH_READ5 }}
+      - name: '运行 【中青看点自动阅读6】'
+        if: env.YOUTH_READ4
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ6 }}
+      - name: '运行 【中青看点自动阅读7】'
+        if: env.YOUTH_READ4
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
+      - name: '运行 【中青看点自动阅读8】'
+        if: env.YOUTH_READ4
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ8 }}
